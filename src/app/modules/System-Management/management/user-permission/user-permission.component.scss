@@ -1,0 +1,14 @@
+::ng-deep th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    font-size: 19px;
+}
+table {width: 100%;}
+
+table .rowClick {
+  cursor: pointer;
+}
+::ng-deep .mat-table thead{
+  background: #f0f0f0;
+}
+mat-icon{
+    color: #005596
+}

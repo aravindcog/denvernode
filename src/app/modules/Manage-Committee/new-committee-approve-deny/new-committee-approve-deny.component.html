@@ -1,0 +1,67 @@
+<div>
+  <div>
+    <div class="container">
+      <div class="matform-Container">
+        <div fxLayout="row" class="mar-tp-header">
+          <div fxFlex="70" class="sub-section-1">
+            <div fxLayout="row">
+              <h1 class="account-modules color-NavyBlue font-600">
+                {{ static_data.lobbyist.register.counsil }}
+              </h1>
+            </div>
+
+            <div fxLayout="row">
+              <h1 class="account-modules text-color font-600">
+                {{ static_data.manage_committee.committee_information }}
+              </h1>
+            </div>
+            <div fxLayout="row">
+              <h2 class="account-modules color-NavyBlue">
+                {{ static_data.manage_committee.committee_registration }}
+              </h2>
+
+              <div fxFlex="30" class="sub-section-2">
+                <app-current-committee-information></app-current-committee-information>
+              </div>
+            </div>
+
+            <div fxLayout="row">
+              <div class="padding-class">
+                <h2 class="account-modules color-NavyBlue">
+                  {{ static_data.manage_committee.committee_contaact }}
+                </h2>
+                <div fxFlex="30" class="sub-section-2">
+                  <app-current-committee-contact-information></app-current-committee-contact-information>
+                </div>
+              </div>
+            </div>
+
+            <div fxLayout="row">
+              <div class="padding-class">
+                <h2 class="account-modules color-NavyBlue">
+                  {{ static_data.manage_committee.officer_contact_information}}
+                </h2>
+                <div fxFlex="30" class="sub-section-3">
+                  <app-current-committee-officer-information> </app-current-committee-officer-information>
+                </div>
+              </div>
+            </div>
+
+            <div fxLayout="row">
+              <div class="padding-class">
+                <h2 class="account-modules color-NavyBlue">
+                  {{ static_data.manage_committee.bank_information}}
+                </h2>
+                <div fxFlex="30" class="sub-section-2">
+                  <app-current-committee-bank-information></app-current-committee-bank-information>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

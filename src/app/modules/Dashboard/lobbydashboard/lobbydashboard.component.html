@@ -1,0 +1,55 @@
+<mat-tab-group >
+        <mat-tab label="Current Drafts">
+                
+        </mat-tab>
+        <mat-tab label="Existing Reports">
+                <div class="mat-table">
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8  list-view-table">
+                    
+                            <ng-container matColumnDef="post_date" >
+                                <th mat-header-cell *matHeaderCellDef class="heading"> Filling Period  </th>
+                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            </ng-container>
+                    
+                            <ng-container matColumnDef="post_type">
+                                <th mat-header-cell *matHeaderCellDef class="heading"> Reporting Period </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+                    
+                            <ng-container matColumnDef="third">
+                                    <th mat-header-cell *matHeaderCellDef class="heading"> Date Submitted </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                </ng-container>
+                    
+                                <ng-container matColumnDef="post_review_status">
+                                        <th mat-header-cell *matHeaderCellDef class="heading"> </th>
+                                        <td mat-cell *matCellDef="let element"> <span class="material-icons">
+                                                arrow_forward_ios
+                                            </span> </td>
+                                    </ng-container>
+                    
+                    
+                            <ng-container matColumnDef="Icons">
+                                <th mat-header-cell *matHeaderCellDef class="heading"> Ammendment </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+                    
+                    
+                            <ng-container matColumnDef="button">
+                                <th mat-header-cell *matHeaderCellDef class="heading"> View </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <!-- <button class="compbtn">Completed</button> -->
+                                    <button class="inpbtn">View</button>
+                                </td>
+                            </ng-container>
+                    
+                    
+                    
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    
+                    </div>
+        </mat-tab>
+      </mat-tab-group>
+

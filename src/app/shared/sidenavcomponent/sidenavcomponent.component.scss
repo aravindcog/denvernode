@@ -1,0 +1,58 @@
+.example-container {
+    position: absolute;
+    top: 8%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // z-index: -1;
+  }
+.sidenav {
+    border-left-color: coral;
+    border-left-width: 10px;
+    border-left-style: solid;
+    margin-left: 12px;
+
+}
+
+.sidenavTransparent {
+    border-left-color: transparent;
+    border-left-width: 10px;
+    border-left-style: solid;
+    margin-left: 12px;    
+}
+
+.msgtab{
+    display: inline-block;
+    height: 82px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #dbd7d7;
+    margin-bottom: 10px;
+    border-left-color: coral;
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+
+.msgbar {
+    width: 20%; 
+    padding: 45px 15px
+}
+
+.msgfont {
+    color: rgb(15 85 151);
+    font-size: 25px
+}
+
+.sidenavestyle {
+    margin-top: 40%;
+    color: rgb(15 85 151);
+}
+
+.sidanavleft {
+    width: 20%; 
+}
+
+.sidenavcontainer {
+    padding-top: 3%
+}
+      /* padding-left: 10px; */

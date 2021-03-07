@@ -1,0 +1,51 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn-cancel-alg {
+    float: right;
+}
+.container {
+  float: left;
+  width: 100%;
+}
+
+.click-hand {
+  cursor: pointer;
+}
+
+
+.create-form {
+    width: 100%;
+  }
+  
+  .create-full-width {
+    width: 80%;
+  }
+
+  .header-pad-top {
+    padding-top: 15px;
+  }
+
+  .tab-width {
+      width: 50%;
+  }
+.container{
+  padding: 20px 20px 20px 20px;
+}
+
+.hide {
+  display: none;
+}
+::ng-deep th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+  font-weight: 400;
+}
+::ng-deep .mat-option{
+  padding: 0px 16px !important;
+}
+button{
+    height: 42px;
+}

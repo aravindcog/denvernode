@@ -1,0 +1,70 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+.cancel-btn {
+    font: 700 14px Roboto Condensed;
+    letter-spacing: 1.25px;
+    color: rgba(0,0,0,.37);
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    transition: .2s;
+    padding: 8px 16px;
+}
+.cleartxtbtn {
+    font: 700 14px Roboto Condensed;
+    color: #e53129;
+    padding: 8px 16px;
+    border: 0;
+    background: transparent;
+    border-radius: 4px;
+    transition: .2s;
+}
+.textonfos p{
+    margin:8px 0px;
+    font:  18px 'Roboto';
+    letter-spacing: 0.24px;
+    color: #00000099;
+}
+.matpopupbody-section{
+    width: 400px;
+}
+.round-modalclosebn {
+    position: absolute;
+    top: 34%;
+    right: 34%;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    color: rgba(102, 102, 102, 0.5);
+    transition: 0.2s;
+}
+
+.round-modalclosebn:hover {
+    background: rgb(0 0 0 / 7%);
+}
+.matpopupheader-section {
+    margin-bottom: 16px;
+}
+
+.matpopupheader-section h2 {
+    font: Bold 20px 'Roboto Condensed';
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.matpopupheader-section p {
+    font: 14px 'Roboto Condensed';
+    letter-spacing: 0.24px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}

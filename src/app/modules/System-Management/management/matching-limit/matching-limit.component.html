@@ -1,0 +1,213 @@
+<div class="container">
+<div class="regisLobby">
+    <h2 class="managemnet-title">
+        {{static_data.public_funding.public_fund}}
+    </h2>
+</div>
+<br>
+<div class="tab-width">
+    <form class="create-form" id="create-info" autocomplete="off" [formGroup]="publicfunding">
+        <div class="flex">
+            <div class="width-40">
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.election_cycle}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.election_cycle}}
+                        </mat-label>
+                        <mat-select formControlName="election_cycle">
+                            <!-- <mat-option *ngFor="let state of stateList" value="{{state.stateCode}}">{{state.stateDesc}}</mat-option> -->
+                            <!-- <mat-option value="option2">Option 2 </mat-option>
+                        <mat-option value="option3">Option 3</mat-option> -->
+                        </mat-select>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('election_cycle'), 'election_cycle')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.qualify_period}}</mat-label>
+                <div class="grid-date">
+                        <mat-form-field appearance="fill" >
+                            <mat-label>Start Date</mat-label>
+                            <input matInput [matDatepicker]="picker1" formControlName="start_date" required>
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                            <mat-error class="error">
+                                {{errorService.checkErrorMessage(publicfunding.get('start_date'), 'start_date')}}
+                            </mat-error>
+                          </mat-form-field>
+                          
+                          <mat-form-field appearance="fill">
+                            <mat-label>End Date</mat-label>
+                            <input matInput [matDatepicker]="picker2"
+                            formControlName="end_date" required  >
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                            <mat-error class="error">
+                                {{errorService.checkErrorMessage(publicfunding.get('end_date'), 'end_date')}}
+                            </mat-error>
+                          </mat-form-field>
+                          </div>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.qualifying_offices}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">
+                            {{static_data.public_funding.qualifying_offices}}</mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="qualifying_offices"
+                        formControlName="qualifying_offices" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('qualifying_offices'), 'qualifying_offices')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.available}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.available}}
+                        </mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="available"
+                        formControlName="available" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('available'), 'available')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.ratio}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.ratio}}
+                        </mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="ratio"
+                        formControlName="ratio" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('ratio'), 'ratio')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div style="width: 58%;">
+            
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.qualifying_contribution}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">
+                            {{static_data.public_funding.qualifying_contribution}}</mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="qualifying_contribution"
+                        formControlName="qualifying_contribution" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('qualifying_contribution'), 'qualifying_contribution')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.number_of_req}}</mat-label>
+                    <mat-form-field appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.number_of_req}}
+                        </mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="number_of_req"
+                            formControlName="number_of_req" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('number_of_req'), 'number_of_req')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.contr_limit}}</mat-label>
+                    <mat-form-field appearance="fill" appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.contr_limit}}
+                        </mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="contr_limit"
+                            formControlName="contr_limit" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('contr_limit'),
+                            'contr_limit')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-label class="width-20">{{static_data.public_funding.contr_amount}}</mat-label>
+                    <mat-form-field appearance="fill" appearance="fill" class="create-full-width"
+                        [hideRequiredMarker]='hideRequiredMarker'>
+                        <mat-label class="width-20" class="visuallyhidden">{{static_data.public_funding.contr_amount}}
+                        </mat-label>
+                        <input matInput type="text" autocomplete="off" autofocus form-fields id="contr_amount"
+                            formControlName="contr_amount" required>
+                        <mat-error class="error">
+                            {{errorService.checkErrorMessage(publicfunding.get('contr_amount'),
+                            'contr_amount')}}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<table mat-table [dataSource]="dataOfficerList" multiTemplateDataRows>
+
+    <ng-container matColumnDef="qca">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.qualifying_contribution}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.qca}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="No_of_required">
+        <th mat-header-cell *matHeaderCellDef>{{static_data.public_funding.number_of_req}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.No_of_required }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="participants">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.contr_limit}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.participants}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="contribution_amount">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.contr_amount}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.contribution_amount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="match_ratio">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.ratio}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.match_ratio}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="qualifying_period">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.qualify_period}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.qualifying_period}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="qualifying_offices">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.qualifying_offices}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.qualifying_offices}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="election">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.election_cycle}} </th>
+        <td mat-cell *matCellDef="let element"> {{element.election}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> {{static_data.public_funding.action}} </th>
+        <td mat-cell *matCellDef="let element" class="click-hand">
+            <span class="material-icons" (click)="editOfficerForm(element)">mode_edit_outline</span>&nbsp;&nbsp;
+            <span class="material-icons" (click)="openConfirmationModal(element.id)">delete_forever</span>
+        </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedStudentsColumnsList;sticky: true"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedStudentsColumnsList;" class="student-element-row"></tr>
+
+    <!-- Extra row to show detail content column -->
+    <!-- <div *ngIf="isTableExpanded"> -->
+    <!-- <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="student-detail-row"
+        [ngClass]="{'hide':!row.isExpanded}"></tr> -->
+    <!-- </div> -->
+</table>
